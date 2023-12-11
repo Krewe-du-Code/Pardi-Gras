@@ -54,6 +54,9 @@ app.get('/auth', (req, res) => {
   res.render("index", {isAuthenticated: req.oidc.isAuthenticated()});
 });
 
+
+
+
 app.get("/*", function (req: Request, res: Response) {
   res.sendFile(
     path.join(__dirname, "..", "dist", "index.html"),
@@ -71,7 +74,6 @@ app.listen(port, () => {
   `);
 });
 
-// this inits the type for req/res for typescript
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({limit: '50mb', extended: true}));
 
