@@ -19,6 +19,7 @@ const MapPage: React.FC<MapProps> = ({userLat, userLng, userId}) => {
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [createPin, setCreatePin] = useState(false)
+  const [createPin, setCreatePin] = useState(false)
   const [isPinSelected, setIsPinSelected] = useState(false)
   const [selectedPin, setSelectedPin] = useState({})
   const [showModal, setShowModal] = useState(false)
