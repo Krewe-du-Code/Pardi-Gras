@@ -15,9 +15,9 @@ import EventsRoutes from './routes/Events'
 import HomeRoutes from "./routes/Home";
 import FeedRoutes from "./routes/Feed";
 import ImageRouter from './routes/PhotoUpload'
-
+import start from './routes/ScrapeEvents'
 import { User } from './db/index'
-
+//start()
 //this is declaring db as an obj so it can be ran when server starts
 type db = { db: object };
 //this is running db/index.ts
