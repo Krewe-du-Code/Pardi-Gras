@@ -1,6 +1,6 @@
 import express, { Request, Response, Router } from "express";
 import path from "path";
-import { db } from "./db";
+import "./db"; //importing not using. so it does the same thing
 import { auth, requiresAuth } from 'express-openid-connect';
 import { AUTH0_CLIENT_ID, AUTH0_CLIENT_SECRET, ISSUER } from './config';
 import { Server } from 'socket.io';
@@ -15,13 +15,13 @@ import EventsRoutes from './routes/Events'
 import HomeRoutes from "./routes/Home";
 import FeedRoutes from "./routes/Feed";
 import ImageRouter from './routes/PhotoUpload'
-import start from './routes/ScrapeEvents'
+//import start from './routes/ScrapeEvents'
 import { User } from './db/index'
+import { Sequelize } from "sequelize";
 //start()
 //this is declaring db as an obj so it can be ran when server starts
-type db = { db: object };
 //this is running db/index.ts
-db;
+
 
 const app = express();
 const server = http.createServer(app);
